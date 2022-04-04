@@ -38,7 +38,7 @@ btnEnviar.addEventListener("click", () => {
   // Acá va nuestro código. Se ejecuta al hacer click en el botón Enviar
   precio = Number(dato1.value);
   rotulo1.innerHTML = "Introduzca su nombre"; // Cambiamos el texto del rótulo
-  descuento = Number(precio) / Number(dato2.value);
+  descuento = (Number(dato2.value) * Number(precio)) / 100;
   precioFinal = Number(precio) - Number(descuento);
   console.log("el precio final es ", precioFinal);
 });
@@ -49,12 +49,12 @@ btnTiempos.addEventListener("click", () => {
   tiempoVuelta2 = Number(vuelta2.value);
   tiempoVuelta3 = Number(vuelta3.value);
   tiempoVuelta4 = Number(vuelta4.value);
-  tiempoPromedio = Number(
-    (Number(vuelta1) + Number(vuelta2) + Number(vuelta3) + Number(vuelta4)) / 4
-  );
+  tiempoPromedio =
+    Number(
+      Number(vuelta1.value) +
+        Number(vuelta2.value) +
+        Number(vuelta3.value) +
+        Number(vuelta4.value)
+    ) / 4;
   console.log("su promedio de tiempo es ", tiempoPromedio);
-  console.log(tiempoVuelta1);
-  console.log(tiempoVuelta2);
-  console.log(tiempoVuelta3);
-  console.log(tiempoVuelta4);
 });
