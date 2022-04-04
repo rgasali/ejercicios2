@@ -21,6 +21,17 @@ let rotulo2 = <HTMLParagraphElement>document.getElementById("rotulo2");
 let precioFinal: number;
 let precio: number;
 let descuento: number;
+//declaracion de variables ejercicio tiempos auto de carrera
+let btnTiempos = <HTMLButtonElement>document.getElementById("btnTiempos");
+let vuelta1 = <HTMLInputElement>document.getElementById("vuelta1");
+let vuelta2 = <HTMLInputElement>document.getElementById("vuelta2");
+let vuelta3 = <HTMLInputElement>document.getElementById("vuelta3");
+let vuelta4 = <HTMLInputElement>document.getElementById("vuelta4");
+let tiempoVuelta1: number;
+let tiempoVuelta2: number;
+let tiempoVuelta3: number;
+let tiempoVuelta4: number;
+let tiempoPromedio: number;
 
 // Resto del código
 btnEnviar.addEventListener("click", () => {
@@ -30,4 +41,20 @@ btnEnviar.addEventListener("click", () => {
   descuento = Number(precio) / Number(dato2.value);
   precioFinal = Number(precio) - Number(descuento);
   console.log("el precio final es ", precioFinal);
+});
+
+// Tiempos de carrera
+btnTiempos.addEventListener("click", () => {
+  tiempoVuelta1 = Number(vuelta1.value);
+  tiempoVuelta2 = Number(vuelta2.value);
+  tiempoVuelta3 = Number(vuelta3.value);
+  tiempoVuelta4 = Number(vuelta4.value);
+  tiempoPromedio = Number(
+    (Number(vuelta1) + Number(vuelta2) + Number(vuelta3) + Number(vuelta4)) / 4
+  );
+  console.log("su promedio de tiempo es ", tiempoPromedio);
+  console.log(tiempoVuelta1);
+  console.log(tiempoVuelta2);
+  console.log(tiempoVuelta3);
+  console.log(tiempoVuelta4);
 });
