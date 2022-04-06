@@ -6,7 +6,8 @@ let calculoPar: number;
 
 btnParImpar.addEventListener("click", () => {
   valorNumerico = Number(numeroparimpar.value);
-  calculoPar = Number(valorNumerico.value);
-  console.log(calculoPar);
-  console.log(valorNumerico);
+  calculoPar = Number(valorNumerico) % 2;
+  if (calculoPar == 0) {
+    console.log(valorNumerico, "es par");
+  } else console.log(valorNumerico, "es impar");
 });
