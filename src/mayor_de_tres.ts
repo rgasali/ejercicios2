@@ -51,3 +51,4 @@ btnCalcMayor.addEventListener("click", () => {
 //valores: 4  4  4  resultado esperado: 4 resultado: 4
 //valores: 3  9  -  resultado esperado: 9 resultado: 9
 //valores: -  -  -  resultado esperado: No hay numeros ingresados  Resultado: no hay numeros ingresados.
+// ******* se probo 11-15 ( y otras variantes con el simbolo - en medio) y devuelve "no hay numeros ingresados"
