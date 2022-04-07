@@ -14,14 +14,18 @@ btnValidarDescuento.addEventListener("click", () => {
   valorCantidad = Number(cantidad.value);
   meselejido = String(mes.value);
 
-  if (meselejido === "octubre" || "Octubre" || "OCTUBRE") {
+  if (
+    meselejido === "octubre" ||
+    meselejido === "Octubre" ||
+    meselejido === "OCTUBRE"
+  ) {
     subtotal = Number(valorPrecioUnitario) * Number(valorCantidad);
     total = Number(subtotal * 0.75);
     console.log("aplica descuento", meselejido);
     console.log("total a pagar", total);
   } else {
-    subtotal = Number(valorPrecioUnitario.value) * Number(valorCantidad.value);
-    total = Number(subtotal.value);
-    console.log(" no aplica descuento,total a pagar", total.value);
+    subtotal = Number(valorPrecioUnitario) * Number(valorCantidad);
+    total = Number(subtotal);
+    console.log(" no aplica descuento,total a pagar", total);
   }
 });
