@@ -55,10 +55,32 @@
     <button id="btnParImpar">Calcular</button>
 
     <h3>Ejercicio descuento Octubre</h3>
+    <div>
+      <input
+        type="number"
+        placeholder="ingrese el valor unitario"
+        id="precioUnitario"
+      />
+      <br />
+      <br />
+      <input type="number" placeholder=" cantidad de productos" id="cantidad" />
+      <br />
+      <br />
+      <input type="text" placeholder=" ingrese el mes" id="mes" />
+
+      <br />
+      <br />
+      <button id="btnValidarDescuento">enviar</button>
+    </div>
     <h3>Ejercicio Aumento de sueldo</h3>
+    <p>Ingrese su sueldo actual</p>
+    <input type="number" id="sueldoActual" />
+    <button id="btnAumentoSueldo">calcular aumento</button>
 
     <script src="src/datos.ts"></script>
     <script src="src/mayor_de_tres.ts"></script>
     <script src="src/par_o_impar.ts"></script>
+    <script src="src/descuento_octubre.ts"></script>
+    <script src="src/aumento_sueldos.ts"></script>
   </body>
 </html>
